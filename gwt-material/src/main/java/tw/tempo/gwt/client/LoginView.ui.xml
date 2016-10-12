@@ -1,0 +1,82 @@
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+             xmlns:g="urn:import:com.google.gwt.user.client.ui"
+             xmlns:m="urn:import:gwt.material.design.client.ui"
+>
+    <ui:style>
+        .panel {
+        margin-top: 40px;
+        margin-bottom: 120px;
+        }
+
+        .fieldPanel {
+        background: white;
+        padding: 6%;
+        }
+
+        .footer {
+        color: white;
+        font-size: 0.9em;
+        }
+
+        .footer a {
+        color: white;
+        text-decoration: underline;
+        }
+    </ui:style>
+
+    <m:MaterialPanel>
+        <m:MaterialRow>
+            <m:MaterialNavBar>
+                <m:MaterialNavBrand>薄蕾絲嚴選 - FB訂單查詢</m:MaterialNavBrand>
+            </m:MaterialNavBar>
+        </m:MaterialRow>
+
+        <m:MaterialRow>
+            <m:MaterialColumn offset="m2 l4" grid="s12 m8 l4">
+                <m:MaterialPanel backgroundColor="white" shadow="1" addStyleNames="{style.panel}">
+                    <m:MaterialPanel addStyleNames="{style.fieldPanel}">
+                        <m:MaterialTitle description="請輸入您的電子郵件信箱與訂單編號："/>
+
+                        <m:MaterialTextBox ui:field="email" placeholder="電子郵件信箱"/>
+                        <m:MaterialTextBox ui:field="orderNo" placeholder="訂單編號"/>
+                        <m:MaterialButton ui:field="login" text="登入" waves="LIGHT" width="100%"/>
+                    </m:MaterialPanel>
+                </m:MaterialPanel>
+            </m:MaterialColumn>
+        </m:MaterialRow>
+        <m:MaterialRow>
+            <m:MaterialColumn>
+            </m:MaterialColumn>
+        </m:MaterialRow>
+
+        <m:MaterialFooter>
+            <m:MaterialRow>
+                <m:MaterialColumn grid="s12 m8 l6" offset="m4 l6" addStyleNames="{style.footer}">
+                    <g:HTMLPanel>
+                        <p>薄蕾絲股份有限公司</p>
+                        <ul>
+                            <li>客服電話/傳真：(02) 2771-7576#12</li>
+                            <li>客服服務時間：週一～週五 09:00~12:45 / 13:45~18:00，國定例假日公休</li>
+                            <li>客服信箱：
+                                <a href="mailto:service@beaulace.com">service@beaulace.com</a>
+                            </li>
+                            <li>Facebook：
+                                <a href="https://www.facebook.com/bossladyfans">https://www.facebook.com/bossladyfans
+                                </a>
+                            </li>
+                            <li>YouTube：
+                                <a href="https://www.youtube.com/user/karenliamovie">
+                                    https://www.youtube.com/user/karenliamovie
+                                </a>
+                            </li>
+                        </ul>
+                    </g:HTMLPanel>
+                </m:MaterialColumn>
+            </m:MaterialRow>
+            <m:MaterialFooterCopyright>
+                <m:MaterialLabel text="© 2016 薄蕾絲嚴選" float="RIGHT"/>
+            </m:MaterialFooterCopyright>
+        </m:MaterialFooter>
+    </m:MaterialPanel>
+
+</ui:UiBinder>

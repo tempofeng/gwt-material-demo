@@ -1,0 +1,42 @@
+buildscript {
+    dependencies {
+        classpath 'fr.putnami.gwt:putnami-gradle-plugin:0.4.0'
+    }
+}
+apply plugin: 'fr.putnami.gwt'
+
+sourceCompatibility = 1.7
+targetCompatibility = 1.7
+
+dependencies {
+    // guava-gwt
+    compile group: 'com.google.guava', name: 'guava-gwt', version: '19.0'
+
+    // gwt
+    compile group: 'com.google.gwt', name: 'gwt-user', version: '2.7.0'
+
+    // gwt-material
+    compile 'com.github.gwtmaterialdesign:gwt-material:1.6.2'
+    compile 'com.github.gwtmaterialdesign:gwt-material-addins:1.6.0'
+    compile 'com.github.gwtmaterialdesign:gwt-material-themes:1.6.0'
+
+    // slf4j-gwt
+    compile 'ru.finam:slf4j-gwt:1.7.7.1'
+
+    // junit
+    testCompile 'junit:junit:4.12'
+}
+
+putnami {
+    module 'tw.tempo.gwt.GwtMaterial'
+    gwtVersion = '2.7.0'
+    compile {
+        sourceLevel = '1.7'
+    }
+    jetty {
+        /** port to listen on. */
+        port = 8180
+        /** port to listen for stop command. */
+        stopPort = 8189
+    }
+}

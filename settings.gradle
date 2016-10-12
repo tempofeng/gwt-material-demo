@@ -1,0 +1,3 @@
+rootProject.name = 'gwt-material-demo'
+include 'gwt-helloworld'
+

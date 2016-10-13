@@ -5,7 +5,7 @@ import com.google.gwt.user.client.ui.RootPanel;
 import org.fusesource.restygwt.client.Defaults;
 import org.fusesource.restygwt.client.ServiceRoots;
 
-public class App implements EntryPoint {
+public class RestyApp implements EntryPoint {
     @Override
     public void onModuleLoad() {
         ServiceRoots.add("github", "https://api.github.com/");

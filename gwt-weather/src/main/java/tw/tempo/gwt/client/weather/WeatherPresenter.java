@@ -35,14 +35,10 @@ public class WeatherPresenter extends Presenter<WeatherPresenter.IView, WeatherP
     }
 
     @Inject
-    public WeatherPresenter(EventBus eventBus,
-                            IView view,
-                            IProxy proxy,
-                            OpenWeatherMapApiService openWeatherMapApiService) {
+    public WeatherPresenter(EventBus eventBus, IView view, IProxy proxy, OpenWeatherMapApiService openWeatherMapApiService) {
         super(eventBus, view, proxy, ApplicationPresenter.SLOT_MAIN);
         this.openWeatherMapApiService = openWeatherMapApiService;
     }
-
 
     @Override
     public void prepareFromRequest(PlaceRequest request) {
@@ -63,7 +59,7 @@ public class WeatherPresenter extends Presenter<WeatherPresenter.IView, WeatherP
         String city = cities[cityIndex++];
         cityIndex = cityIndex >= cities.length ? 0 : cityIndex;
 
-        openWeatherMapApiService.weather("77a4142550422424a4209fc5b535549a",
+        openWeatherMapApiService.weather("OPEN_WEATHER_MAP_API_KEY",
                 city,
                 new MaterialLoaderCallbackWrapper<>(new MethodCallback<OpenWeatherMapApiService.City>() {
                     @Override

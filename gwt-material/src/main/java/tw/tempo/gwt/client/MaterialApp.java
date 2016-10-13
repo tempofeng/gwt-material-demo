@@ -5,8 +5,8 @@ import com.google.gwt.user.client.ui.RootPanel;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-public class App implements EntryPoint {
-    private static final Logger log = LoggerFactory.getLogger(App.class);
+public class MaterialApp implements EntryPoint {
+    private static final Logger log = LoggerFactory.getLogger(MaterialApp.class);
 
     @Override
     public void onModuleLoad() {

@@ -27,7 +27,7 @@
     <m:MaterialPanel>
         <m:MaterialRow>
             <m:MaterialNavBar>
-                <m:MaterialNavBrand>薄蕾絲嚴選 - FB訂單查詢</m:MaterialNavBrand>
+                <m:MaterialNavBrand>JCConf Taiwan</m:MaterialNavBrand>
             </m:MaterialNavBar>
         </m:MaterialRow>
 
@@ -35,17 +35,12 @@
             <m:MaterialColumn offset="m2 l4" grid="s12 m8 l4">
                 <m:MaterialPanel backgroundColor="white" shadow="1" addStyleNames="{style.panel}">
                     <m:MaterialPanel addStyleNames="{style.fieldPanel}">
-                        <m:MaterialTitle description="請輸入您的電子郵件信箱與訂單編號："/>
-
+                        <m:MaterialTitle description="請輸入您的電子郵件信箱與密碼："/>
                         <m:MaterialTextBox ui:field="email" placeholder="電子郵件信箱"/>
-                        <m:MaterialTextBox ui:field="orderNo" placeholder="訂單編號"/>
+                        <m:MaterialTextBox ui:field="password" placeholder="密碼" type="PASSWORD"/>
                         <m:MaterialButton ui:field="login" text="登入" waves="LIGHT" width="100%"/>
                     </m:MaterialPanel>
                 </m:MaterialPanel>
-            </m:MaterialColumn>
-        </m:MaterialRow>
-        <m:MaterialRow>
-            <m:MaterialColumn>
             </m:MaterialColumn>
         </m:MaterialRow>
 
@@ -53,28 +48,18 @@
             <m:MaterialRow>
                 <m:MaterialColumn grid="s12 m8 l6" offset="m4 l6" addStyleNames="{style.footer}">
                     <g:HTMLPanel>
-                        <p>薄蕾絲股份有限公司</p>
+                        <p>JCConf Taiwan 由 TWJUG 主辦，為社群發起的 Java 程式語言及相關領域的研討會，旨在提供與會者有更多參與社群以及技術交流的機會。</p>
                         <ul>
-                            <li>客服電話/傳真：(02) 2771-7576#12</li>
-                            <li>客服服務時間：週一～週五 09:00~12:45 / 13:45~18:00，國定例假日公休</li>
-                            <li>客服信箱：
-                                <a href="mailto:service@beaulace.com">service@beaulace.com</a>
-                            </li>
-                            <li>Facebook：
-                                <a href="https://www.facebook.com/bossladyfans">https://www.facebook.com/bossladyfans
-                                </a>
-                            </li>
-                            <li>YouTube：
-                                <a href="https://www.youtube.com/user/karenliamovie">
-                                    https://www.youtube.com/user/karenliamovie
-                                </a>
-                            </li>
+                            <li>贊助相關：<a href="mailto:sponsor@jcconf.tw">sponsor@jcconf.tw</a></li>
+                            <li>議程相關：<a href="mailto:program@jcconf.tw">program@jcconf.tw</a></li>
+                            <li>宣傳活動相關：<a href="mailto:marketing@jcconf.tw">marketing@jcconf.tw</a></li>
+                            <li>其他聯絡：<a href="mailto:contact@jcconf.tw">contact@jcconf.tw</a></li>
                         </ul>
                     </g:HTMLPanel>
                 </m:MaterialColumn>
             </m:MaterialRow>
             <m:MaterialFooterCopyright>
-                <m:MaterialLabel text="© 2016 薄蕾絲嚴選" float="RIGHT"/>
+                <m:MaterialLabel text="© jcconf.tw 2016" float="RIGHT"/>
             </m:MaterialFooterCopyright>
         </m:MaterialFooter>
     </m:MaterialPanel>

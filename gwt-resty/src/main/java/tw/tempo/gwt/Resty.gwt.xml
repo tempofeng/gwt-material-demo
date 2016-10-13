@@ -34,7 +34,7 @@
     <set-property name="restygwt.encodeDecode.useGwtJackson" value="true" />
 
     <!-- Specify the app entry point class.                         -->
-    <entry-point class='tw.tempo.gwt.client.App'/>
+    <entry-point class='tw.tempo.gwt.client.RestyApp'/>
 
     <!-- Specify the paths for translatable code                    -->
     <source path='client'/>

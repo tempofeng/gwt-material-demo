@@ -7,8 +7,6 @@ import com.google.inject.Inject;
 import com.gwtplatform.mvp.client.ViewImpl;
 import gwt.material.design.client.ui.MaterialCard;
 import gwt.material.design.client.ui.MaterialLabel;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 import tw.tempo.gwt.client.openweathermap.OpenWeatherMapApiService;
 
 public class WeatherView extends ViewImpl implements WeatherPresenter.IView {

@@ -25,7 +25,6 @@ public interface GithubApiService extends RestService {
         public String avatarUrl;
         public String url;
         public String name;
-        public String company;
         public String blog;
         public String location;
         public String email;

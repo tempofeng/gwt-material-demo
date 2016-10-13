@@ -28,7 +28,7 @@ dependencies {
 }
 
 putnami {
-    module 'tw.tempo.gwt.GwtMaterial'
+    module 'tw.tempo.gwt.Material'
     gwtVersion = '2.7.0'
     compile {
         sourceLevel = '1.7'

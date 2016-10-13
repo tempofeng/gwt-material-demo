@@ -18,7 +18,6 @@ public class GithubWidget extends Composite {
     }
 
     private static final Binder uiBinder = GWT.create(Binder.class);
-    private static final GithubApiService githubApiService = GWT.create(GithubApiService.class);
     private static final Logger log = LoggerFactory.getLogger(GithubWidget.class);
 
     @UiField
@@ -38,10 +37,12 @@ public class GithubWidget extends Composite {
         initWidget(uiBinder.createAndBindUi(this));
     }
 
+    private static final GithubApiService githubApiService = GWT.create(GithubApiService.class);
+
     @UiHandler("submit")
     public void onSubmit(ClickEvent e) {
         githubApiService.user(username.getValue(),
-                new MaterialLoaderCallbackWrapper<>(new MethodCallback<GithubApiService.User>() {
+                new MethodCallback<GithubApiService.User>() {
                     @Override
                     public void onFailure(Method method, Throwable exception) {
                         log.error(exception.getLocalizedMessage(), exception);
@@ -59,6 +60,6 @@ public class GithubWidget extends Composite {
                         email.setText(user.email);
                         profile.setVisible(true);
                     }
-                }));
+                });
     }
 }

@@ -1,0 +1,71 @@
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+             xmlns:m="urn:import:gwt.material.design.client.ui"
+>
+    <ui:style>
+        .card-content {
+        font-family: league-gothic, sans-serif;
+        }
+        .weather-icon {
+        margin: 20px 0 20px 0;
+        }
+        .weather-details {
+        margin-top: 20px;
+        border-top: 2px solid white;
+        padding: 0 40px 0 40px;
+        }
+        .label {
+        display: inline;
+        }
+        .temp {
+        font-size: 12em;
+        }
+        .humidity {
+        margin-top: 35px;
+        font-size: 4em;
+        }
+        .wind {
+        font-size: 4em;
+        }
+        .font-icon {
+        padding-right: 10px;
+        }
+    </ui:style>
+
+    <m:MaterialPanel>
+        <m:MaterialRow>
+            <m:MaterialColumn offset="m2 l4" grid="s12 m8 l4">
+                <m:MaterialCard ui:field="card">
+                    <m:MaterialCardContent textColor="white" addStyleNames="{style.card-content}">
+                        <m:MaterialLabel ui:field="city" fontSize="3em" textAlign="CENTER"/>
+
+                        <m:MaterialPanel textAlign="CENTER">
+                            <m:MaterialLabel ui:field="weatherIcon" fontSize="20em" addStyleNames="wi {style.weather-icon}"/>
+                        </m:MaterialPanel>
+
+                        <m:MaterialPanel addStyleNames="{style.weather-details}">
+                            <m:MaterialRow>
+                                <m:MaterialColumn grid="s6" addStyleNames="{style.temp}">
+                                    <m:MaterialLabel ui:field="temp" addStyleNames="{style.label}"/>
+                                    <m:MaterialLabel addStyleNames="wi wi-degrees {style.label}"/>
+                                </m:MaterialColumn>
+                                <m:MaterialColumn grid="s6">
+                                    <m:MaterialPanel addStyleNames="{style.humidity}">
+                                        <m:MaterialLabel addStyleNames="wi wi-raindrop {style.label} {style.font-icon}"/>
+                                        <m:MaterialLabel ui:field="humidity" addStyleNames="{style.label}"/>
+                                        <m:MaterialLabel text="%" addStyleNames="{style.label}"/>
+                                    </m:MaterialPanel>
+
+                                    <m:MaterialPanel addStyleNames="{style.wind}">
+                                        <m:MaterialLabel  addStyleNames="wi wi-small-craft-advisory {style.label} {style.font-icon}"/>
+                                        <m:MaterialLabel ui:field="wind" addStyleNames="{style.label}"/>
+                                        <m:MaterialLabel text="Km/h" addStyleNames="{style.label}"/>
+                                    </m:MaterialPanel>
+                                </m:MaterialColumn>
+                            </m:MaterialRow>
+                        </m:MaterialPanel>
+                    </m:MaterialCardContent>
+                </m:MaterialCard>
+            </m:MaterialColumn>
+        </m:MaterialRow>
+    </m:MaterialPanel>
+</ui:UiBinder>

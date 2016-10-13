@@ -1,13 +1,40 @@
-version 'unspecified'
-
-apply plugin: 'java'
-
-sourceCompatibility = 1.5
-
-repositories {
-    mavenCentral()
+buildscript {
+    dependencies {
+        classpath 'fr.putnami.gwt:putnami-gradle-plugin:0.4.0'
+    }
 }
+apply plugin: 'fr.putnami.gwt'
+
+sourceCompatibility = 1.7
+targetCompatibility = 1.7
 
 dependencies {
-    testCompile group: 'junit', name: 'junit', version: '4.11'
+    // guava-gwt
+    compile group: 'com.google.guava', name: 'guava-gwt', version: '19.0'
+    // gwt
+    compile group: 'com.google.gwt', name: 'gwt-user', version: '2.7.0'
+    // jsr-311
+    compile group: 'javax.ws.rs', name: 'jsr311-api', version: '1.1.1'
+    // gwt-jackson
+    compile group: 'com.github.nmorel.gwtjackson', name: 'gwt-jackson', version: '0.13.0'
+    // RestyGWT
+    compile 'org.fusesource.restygwt:restygwt:2.2.0'
+    // gwt-material
+    compile 'com.github.gwtmaterialdesign:gwt-material:1.6.2'
+    compile 'com.github.gwtmaterialdesign:gwt-material-addins:1.6.0'
+    compile 'com.github.gwtmaterialdesign:gwt-material-themes:1.6.0'
+    // gwt-platform
+    compile group: 'com.gwtplatform', name: 'gwtp-mvp-client', version: '1.5.3'
+    // slf4j-gwt
+    compile 'ru.finam:slf4j-gwt:1.7.7.1'
+    // junit
+    testCompile 'junit:junit:4.12'
+}
+
+putnami {
+    module 'tw.tempo.gwt.Weather'
+    gwtVersion = '2.7.0'
+    compile {
+        sourceLevel = '1.7'
+    }
 }

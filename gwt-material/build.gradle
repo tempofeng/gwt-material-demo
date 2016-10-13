@@ -33,10 +33,4 @@ putnami {
     compile {
         sourceLevel = '1.7'
     }
-    jetty {
-        /** port to listen on. */
-        port = 8180
-        /** port to listen for stop command. */
-        stopPort = 8189
-    }
 }

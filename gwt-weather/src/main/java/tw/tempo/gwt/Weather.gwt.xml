@@ -20,9 +20,25 @@
     <!-- guava-gwt -->
     <inherits name="com.google.common.base.Base"/>
 
-    <!-- Specify the app entry point class.                         -->
-    <entry-point class='tw.tempo.gwt.client.HelloWorldApp'/>
+    <!-- GWT Material -->
+    <inherits name="gwt.material.design.GwtMaterialWithJQuery"/>
+    <inherits name="gwt.material.design.GwtMaterialDesignBasic"/>
+    <inherits name="gwt.material.design.themes.GwtMaterialThemeBlue"/>
+    <inherits name='gwt.material.design.addins.GwtMaterialAddins'/>
 
-    <!-- Specify the paths for translatable code                    -->
-    <source path='client'/>
+    <!-- GWT Jackson -->
+    <inherits name="com.github.nmorel.gwtjackson.GwtJackson"/>
+
+    <!-- RestyGWT -->
+    <inherits name="org.fusesource.restygwt.RestyGWT"/>
+    <set-property name="restygwt.encodeDecode.useGwtJackson" value="true" />
+
+    <!-- GWTP -->
+    <inherits name="com.gwtplatform.mvp.MvpWithEntryPoint"/>
+    <set-configuration-property name="gwtp.bootstrapper"
+                                value="tw.tempo.gwt.client.AppBootstrapper"/>
+    <extend-configuration-property name="gin.ginjector.modules"
+                                   value="tw.tempo.gwt.client.ClientModule"/>
+
+    <stylesheet src="https://cdnjs.cloudflare.com/ajax/libs/weather-icons/2.0.9/css/weather-icons.css" />
 </module>
